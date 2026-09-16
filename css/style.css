@@ -1,0 +1,904 @@
+/* =========================
+   基本設定
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        "Noto Sans TC",
+        sans-serif;
+
+    color: #222;
+
+    background: #ffffff;
+
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================
+   導覽列
+========================= */
+
+.site-header {
+    background: #ffffff;
+
+    border-bottom:
+        1px solid #eeeeee;
+}
+
+.navbar {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding:
+        18px 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.2rem;
+
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #555;
+
+    transition:
+        color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+
+/* =========================
+   首頁主視覺
+========================= */
+
+.hero {
+    min-height: 560px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef4ff,
+            #f8f9fc
+        );
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-label {
+    margin: 0 0 12px;
+
+    font-size: 0.85rem;
+
+    letter-spacing: 0.2em;
+
+    color: #5271a8;
+
+    font-weight: 700;
+}
+
+.hero h1 {
+    margin: 0 0 20px;
+
+    font-size:
+        clamp(2.5rem, 7vw, 5rem);
+
+    line-height: 1.2;
+}
+
+.hero p:not(.hero-label) {
+    margin-bottom: 32px;
+
+    color: #666;
+
+    font-size: 1.1rem;
+}
+
+
+/* =========================
+   按鈕
+========================= */
+
+.button {
+    display: inline-block;
+
+    padding:
+        12px 24px;
+
+    background: #222;
+
+    color: #fff;
+
+    border-radius: 4px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.button:hover {
+    background: #444;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   一般區塊
+========================= */
+
+.section {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding:
+        90px 24px;
+}
+
+.section-title {
+    margin-bottom: 45px;
+}
+
+.section-label {
+    margin: 0 0 8px;
+
+    font-size: 0.8rem;
+
+    letter-spacing: 0.2em;
+
+    color: #5271a8;
+
+    font-weight: 700;
+}
+
+.section-title h2,
+.about-content h2 {
+    margin:
+        0 0 12px;
+
+    font-size: 2rem;
+}
+
+.section-title > p:last-child {
+    margin: 0;
+
+    color: #777;
+}
+
+
+/* =========================
+   活動列表
+========================= */
+
+.activity-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.activity-card {
+    padding: 28px;
+
+    border:
+        1px solid #eeeeee;
+
+    border-radius: 8px;
+
+    background: #fff;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.activity-card-link {
+    display: block;
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+.activity-detail-link {
+    margin-top: 18px;
+
+    font-weight: 700;
+
+    color: #5271a8;
+}
+
+
+.activity-card-link:hover
+.activity-detail-link {
+    color: #222;
+}
+
+
+.activity-card:hover {
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.08);
+}
+
+.activity-date {
+    color: #5271a8;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+}
+
+.activity-card h3 {
+    margin:
+        8px 0 10px;
+
+    font-size: 1.25rem;
+}
+
+.activity-location {
+    color: #777;
+
+    font-size: 0.9rem;
+}
+
+.activity-description {
+    color: #666;
+}
+
+.section-more {
+    margin-top: 30px;
+}
+
+.text-link {
+    font-weight: 700;
+
+    border-bottom:
+        1px solid #222;
+
+    padding-bottom: 3px;
+}
+
+
+/* =========================
+   活動成果
+========================= */
+
+.results-section {
+    max-width: none;
+
+    background: #f6f7f9;
+}
+
+.photo-slider {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.slider-image {
+    flex: 1;
+
+    aspect-ratio: 16 / 9;
+
+    background: #ddd;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+}
+
+.slider-image a {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+.slider-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.3s ease;
+}
+
+.slider-image a:hover img {
+    transform: scale(1.03);
+
+    opacity: 0.92;
+}
+
+
+.slider-button {
+    width: 46px;
+
+    height: 46px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #222;
+
+    color: #fff;
+
+    font-size: 1.2rem;
+
+    cursor: pointer;
+}
+
+.slider-button:hover {
+    background: #444;
+}
+
+.slider-title {
+    margin-top: 20px;
+
+    text-align: center;
+
+    font-weight: 700;
+}
+
+.slider-dots {
+    margin-top: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.slider-dot {
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #ccc;
+}
+
+.slider-dot.active {
+    background: #222;
+}
+
+
+
+
+
+/* =========================
+   關於專案
+========================= */
+
+.about-section {
+    min-height: 350px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.about-content {
+    max-width: 700px;
+}
+
+.about-content p:not(.section-label) {
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.site-footer {
+    padding:
+        30px 24px;
+
+    background: #222;
+
+    color: #fff;
+
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   內頁標題
+========================= */
+
+.page-header {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding:
+        100px 24px 70px;
+
+    border-bottom:
+        1px solid #eeeeee;
+}
+
+.page-header h1 {
+    margin:
+        0 0 12px;
+
+    font-size:
+        clamp(2.2rem, 5vw, 4rem);
+
+    line-height: 1.2;
+}
+
+.page-header > p:last-child {
+    margin: 0;
+
+    color: #777;
+}
+
+
+/* =========================
+   已完成活動區
+========================= */
+
+.completed-section {
+    background: #f6f7f9;
+
+    max-width: none;
+}
+
+
+/* 已完成活動卡片稍微淡一點 */
+
+.completed-section .activity-card {
+    background: #ffffff;
+}
+
+/* =========================
+   活動成果列表
+========================= */
+
+.results-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 40px;
+}
+
+
+.result-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border:
+        1px solid #eeeeee;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.05);
+}
+
+
+.result-image {
+    aspect-ratio: 16 / 9;
+
+    background: #eeeeee;
+
+    overflow: hidden;
+}
+
+
+.result-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.result-content {
+    padding: 25px;
+}
+
+
+.result-content h2 {
+    margin:
+        8px 0;
+
+    font-size: 1.4rem;
+}
+
+
+.result-content p {
+    color: #666;
+}
+
+
+/* 手機版 */
+
+@media (max-width: 768px) {
+
+    .results-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   活動成果照片牆
+========================= */
+
+.result-gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+}
+
+
+.result-photo {
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    background: #eee;
+
+}
+
+
+.result-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.result-photo:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
+
+
+/* 手機版 */
+
+@media (max-width: 768px) {
+
+    .result-gallery {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .result-gallery {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* =========================
+   活動成果詳細頁
+========================= */
+
+.result-detail {
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+.detail-content {
+    margin-bottom: 40px;
+}
+
+
+.detail-content h1 {
+    margin:
+        8px 0 12px;
+
+    font-size: 2.2rem;
+
+    line-height: 1.3;
+}
+
+
+.detail-content p {
+    color: #666;
+
+    margin-top: 20px;
+}
+
+
+/* =========================
+   詳細頁照片牆
+========================= */
+
+.detail-gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 24px;
+
+    margin-top: 40px;
+
+}
+
+
+.detail-photo {
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    background: #eeeeee;
+
+}
+
+
+.detail-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.detail-photo:hover img {
+
+    transform: scale(1.03);
+
+}
+
+
+/* =========================
+   詳細頁手機版
+========================= */
+
+@media (max-width: 768px) {
+
+    .detail-gallery {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .detail-content h1 {
+
+        font-size: 1.8rem;
+
+    }
+
+}
+
+
+
+/* =========================
+   手機版
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        min-height: 450px;
+
+        padding:
+            60px 20px;
+    }
+
+    .section {
+        padding:
+            60px 20px;
+    }
+
+    .activity-list {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-slider {
+        gap: 10px;
+    }
+
+    .slider-button {
+        width: 38px;
+
+        height: 38px;
+
+        flex-shrink: 0;
+    }
+
+}
+
+/* =========================
+   活動訊息詳細頁
+========================= */
+
+.activity-detail {
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+.activity-detail h1 {
+    margin:
+        10px 0 15px;
+
+    font-size:
+        clamp(2rem, 5vw, 3.5rem);
+
+    line-height: 1.3;
+}
+
+.activity-detail-description,
+.activity-detail-info {
+    margin-top: 45px;
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid #eeeeee;
+}
+
+.activity-detail-description h2,
+.activity-detail-info h2 {
+    margin:
+        0 0 15px;
+
+    font-size: 1.4rem;
+}
+
+.activity-detail-description p {
+    color: #666;
+
+    font-size: 1.05rem;
+}
+
+.activity-detail-info p {
+    color: #666;
+}
+
+
