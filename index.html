@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>專案辦公室</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- 網站導覽列 -->
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                專案辦公室
+            </a>
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    首頁
+                </a>
+
+                <a href="activities.html">
+                    活動訊息
+                </a>
+
+                <a href="results.html">
+                    活動成果
+                </a>
+
+                <a href="about.html">
+                    關於專案
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- 主要內容 -->
+    <main>
+
+        <!-- 首頁主視覺 -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="hero-label">
+                    PROJECT OFFICE
+                </p>
+
+                <h1>
+                    專案辦公室
+                </h1>
+
+                <p>
+                    連結每一場活動，記錄每一份成果。
+                </p>
+
+                <a href="activities.html" class="button">
+                    查看活動訊息
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- 最新活動 -->
+        <section class="section">
+
+            <div class="section-title">
+
+                <p class="section-label">
+                    ACTIVITIES
+                </p>
+
+                <h2>
+                    最新活動訊息
+                </h2>
+
+                <p>
+                    掌握專案最新活動與相關資訊。
+                </p>
+
+            </div>
+
+
+            <div id="latest-activities" class="activity-list">
+
+                <!--
+                    之後 JavaScript
+                    會自動把活動資料放到這裡
+                -->
+
+                <p>
+                    活動資料載入中……
+                </p>
+
+            </div>
+
+
+            <div class="section-more">
+
+                <a href="activities.html" class="text-link">
+                    查看全部活動 →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- 活動成果照片 -->
+        <section class="section results-section">
+
+            <div class="section-title">
+
+                <p class="section-label">
+                    RESULTS
+                </p>
+
+                <h2>
+                    活動成果
+                </h2>
+
+                <p>
+                    一起回顧過去活動的精彩紀錄。
+                </p>
+
+            </div>
+
+
+            <div class="photo-slider">
+
+                <button
+                    class="slider-button"
+                    id="prev-button"
+                    type="button"
+                >
+                    ←
+                </button>
+
+
+<div class="slider-image">
+
+    <a
+        id="result-link"
+        href="results.html"
+    >
+
+        <img
+            id="result-image"
+            src=""
+            alt="活動成果照片"
+        >
+
+    </a>
+
+</div>
+
+
+
+                <button
+                    class="slider-button"
+                    id="next-button"
+                    type="button"
+                >
+                    →
+                </button>
+
+            </div>
+
+
+            <div
+                id="result-title"
+                class="slider-title"
+            >
+                活動成果
+            </div>
+
+
+            <div
+                id="slider-dots"
+                class="slider-dots"
+            >
+            </div>
+
+        </section>
+
+
+        <!-- 關於專案 -->
+        <section class="section about-section">
+
+            <div class="about-content">
+
+                <p class="section-label">
+                    ABOUT
+                </p>
+
+                <h2>
+                    關於專案
+                </h2>
+
+                <p>
+                    這裡放置專案辦公室的介紹、
+                    專案目標以及相關資訊。
+                </p>
+
+                <a href="about.html" class="text-link">
+                    了解更多 →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- 頁尾 -->
+    <footer class="site-footer">
+
+        <p>
+            © 2026 專案辦公室
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
